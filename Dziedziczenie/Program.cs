@@ -40,6 +40,31 @@ namespace Dziedziczenie
 
             #region testy cz.2
 
+            ((Student)o2).DodajOcene("PO", "20.02.2011", 5.0);
+            ((Student)o2).DodajOcene("Bazy danych", "13.02.2011", 4.0);
+
+            o2.WypiszInfo();
+
+            s.DodajOcene("Bazy danych", "01.05.2011", 5.0);
+            s.DodajOcene("AWW", "11.05.2011", 5.0);
+            s.DodajOcene("AWW", "02.04.2011", 4.5);
+
+            s.WypiszInfo();
+
+            s.UsunOcene("AWW", "02.04.2011", 4.5);
+
+            s.WypiszInfo();
+            s.DodajOcene("AWW", "02.04.2011", 4.5);
+            s.UsunOceny("AWWW");
+
+            s.WypiszInfo();
+            s.DodajOcene("AWWW", "02.04.2011", 4.5);
+            s.UsunOceny();
+
+            s.WypiszInfo();
+            Console.ReadKey();
+
+
             #endregion
         }
     }
