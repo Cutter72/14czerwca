@@ -6,7 +6,28 @@ using System.Threading.Tasks;
 
 namespace Dziedziczenie
 {
-    class Pilkarz
+    class Pilkarz : Osoba
     {
+        private string pozycja;
+        private string klub;
+        private int liczbaGoli = 0;
+
+        public Pilkarz(string imie_, string nazwisko_, string dataUrodzenia_, string pozycja_, string klub_) : base(imie_, nazwisko_, dataUrodzenia_) {
+            this.pozycja = pozycja_;
+            this.klub = klub_;
+        }
+
+        public override void WypiszInfo()
+        {
+            base.WypiszInfo();
+            Console.WriteLine($"Dodatkowe informacje: pozycja {this.pozycja}, klub {this.klub}, liczba goli: {this.liczbaGoli}");
+        }
+
+        public void StrzelGola() {
+            Console.WriteLine($"Gooooooool!");
+            liczbaGoli++;
+        }
+
+
     }
 }
